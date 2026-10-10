@@ -271,3 +271,7 @@ Any claimed improvement should be backed by controlled experiments on a clearly 
 ## Acknowledgements
 
 Thanks to the Amazon ML Challenge organizers for defining the problem and providing the challenge resources. Refer to the official challenge documentation for the definitive task specification, dataset rules, evaluation procedure, and submission requirements.
+
+
+
+##  The training files and datasets used in this project are not publicly displayed or shared in this repository to maintain data confidentiality and comply with the applicable rules, terms, and policies of the Amazon ML Challenge 2026.

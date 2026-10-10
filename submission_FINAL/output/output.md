@@ -162,4 +162,6 @@ Before submission:
 - Keep large datasets and generated artifacts out of Git unless the challenge explicitly permits publishing them.
 
 
-# NOTE : I AM NOT GOING SHOW THE TRAINING FILE AND DATASETS BECAUSE OF THE DATA SHOULD TAKEN SECERT AS UNDER THE RULE AND TERMS OF AMAZON POLICS IN THIS CHALLENGE.
+# Note on Data Confidentiality
+
+# The training files and datasets used in this project are not publicly displayed or shared in this repository to maintain data confidentiality and comply with the applicable rules, terms, and policies of the Amazon ML Challenge 2026.
