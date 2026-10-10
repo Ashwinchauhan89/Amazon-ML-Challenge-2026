@@ -1,0 +1,36 @@
+# Pinned dependencies for the Business Entity Resolution pipeline (team Lassi).
+#
+# Only what `src/` and `tests/` actually import. An earlier version of this file
+# was a whole-machine `pip freeze` (250+ packages: torch, sagemaker, mlflow,
+# jupyter, flask) that both failed to resolve and, worse, omitted four packages
+# the pipeline cannot run without. Verified against the imports in src/ and
+# tests/, so `pip install -r requirements.txt` is sufficient to regenerate both
+# output files.
+#
+# Python 3.11 or newer.
+
+# --- candidate generation -------------------------------------------------
+# TF-IDF vectoriser for character n-grams.
+scikit-learn==1.9.1
+# Sparse top-k cosine (S1 x S2/S3). The multithreaded matmul that makes
+# blocking tractable; note n_threads must not be 0 or None (treated as serial).
+sparse_dot_topn==1.2.0
+scipy==1.17.1
+numpy==2.4.6
+
+# --- data I/O -------------------------------------------------------------
+# Lazy TSV scans with column projection; the reason the 2.4 GB dataset fits.
+polars==1.44.2
+
+# --- pairwise features ----------------------------------------------------
+# Elementwise multithreaded string distances (process.cpdist).
+rapidfuzz==3.14.6
+# Devanagari/Tamil/Telugu/Gujarati/Odia -> Latin transliteration. Without it
+# 34.9% of cross-script pairs score ~0 similarity and are unreachable.
+Unidecode==1.4.0
+
+# --- matching model -------------------------------------------------------
+lightgbm==4.7.0
+
+# --- tests ----------------------------------------------------------------
+pytest==9.1.1
